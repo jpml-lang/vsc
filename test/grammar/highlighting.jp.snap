@@ -1,0 +1,221 @@
+># Grammar snapshot fixture: every construct the highlighter knows about.
+#^ source.jpml comment.line.number-sign.jpml punctuation.definition.comment.jpml
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jpml comment.line.number-sign.jpml
+>version: 2
+#^^^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#       ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#        ^ source.jpml meta.entry.jpml
+#         ^ source.jpml meta.entry.jpml constant.numeric.jpml
+>name: hello world   # an unquoted string, then a comment
+#^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#    ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#     ^ source.jpml meta.entry.jpml
+#      ^^^^^^^^^^^ source.jpml meta.entry.jpml string.unquoted.jpml
+#                 ^^^ source.jpml meta.entry.jpml
+#                    ^ source.jpml meta.entry.jpml comment.line.number-sign.jpml punctuation.definition.comment.jpml
+#                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.jpml meta.entry.jpml comment.line.number-sign.jpml
+>
+>[SERVER_ID]
+#^ source.jpml meta.section.jpml punctuation.definition.section.begin.jpml
+# ^^^^^^^^^ source.jpml meta.section.jpml entity.name.section.jpml
+#          ^ source.jpml meta.section.jpml punctuation.definition.section.end.jpml
+>config: {
+#^^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#      ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#       ^ source.jpml meta.entry.jpml
+#        ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.begin.jpml
+>  disabled_channels:,
+#^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml
+#  ^^^^^^^^^^^^^^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml support.type.property-name.jpml
+#                   ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#                    ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.separator.dictionary.jpml
+>  disabled_users: [9892, 82082, 8209],
+#^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml
+#  ^^^^^^^^^^^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml support.type.property-name.jpml
+#                ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#                 ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml
+#                  ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#                   ^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                       ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                        ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml
+#                         ^^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                              ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                               ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml
+#                                ^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                    ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+#                                     ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.separator.dictionary.jpml
+>  nested: {deep: {deeper: [1, [2, [3]]]}}
+#^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml
+#  ^^^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml support.type.property-name.jpml
+#        ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#         ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml
+#          ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.begin.jpml
+#           ^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml support.type.property-name.jpml
+#               ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#                ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml
+#                 ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.begin.jpml
+#                  ^^^^^^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml support.type.property-name.jpml
+#                        ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#                         ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml
+#                          ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#                           ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                            ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                             ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml
+#                              ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#                               ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                 ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml
+#                                  ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#                                   ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                    ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+#                                     ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+#                                      ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+#                                       ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.end.jpml
+#                                        ^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.end.jpml
+>}
+#^ source.jpml meta.entry.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.end.jpml
+>
+>[guild.limits]
+#^ source.jpml meta.section.jpml punctuation.definition.section.begin.jpml
+# ^^^^^ source.jpml meta.section.jpml entity.name.section.jpml
+#      ^ source.jpml meta.section.jpml punctuation.separator.section.jpml
+#       ^^^^^^ source.jpml meta.section.jpml entity.name.section.jpml
+#             ^ source.jpml meta.section.jpml punctuation.definition.section.end.jpml
+>["weird.name"]
+#^ source.jpml meta.section.jpml punctuation.definition.section.begin.jpml
+# ^^^^^^^^^^^^ source.jpml meta.section.jpml entity.name.section.jpml string.quoted.jpml
+#             ^ source.jpml meta.section.jpml punctuation.definition.section.end.jpml
+>"needs quotes": 'single\ttab é \U0001F600'
+#^^^^^^^^^^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#              ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#               ^ source.jpml meta.entry.jpml
+#                ^ source.jpml meta.entry.jpml string.quoted.single.jpml punctuation.definition.string.begin.jpml
+#                 ^^^^^^ source.jpml meta.entry.jpml string.quoted.single.jpml
+#                       ^^ source.jpml meta.entry.jpml string.quoted.single.jpml constant.character.escape.jpml
+#                         ^^^^^^ source.jpml meta.entry.jpml string.quoted.single.jpml
+#                               ^^^^^^^^^^ source.jpml meta.entry.jpml string.quoted.single.jpml constant.character.escape.jpml
+#                                         ^ source.jpml meta.entry.jpml string.quoted.single.jpml punctuation.definition.string.end.jpml
+>bad escape: "oops \q"
+#^^^^^^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#          ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#           ^ source.jpml meta.entry.jpml
+#            ^ source.jpml meta.entry.jpml string.quoted.double.jpml punctuation.definition.string.begin.jpml
+#             ^^^^^ source.jpml meta.entry.jpml string.quoted.double.jpml
+#                  ^^ source.jpml meta.entry.jpml string.quoted.double.jpml invalid.illegal.unrecognized-string-escape.jpml
+#                    ^ source.jpml meta.entry.jpml string.quoted.double.jpml punctuation.definition.string.end.jpml
+>continued: "one \
+#^^^^^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#         ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#          ^ source.jpml meta.entry.jpml
+#           ^ source.jpml meta.entry.jpml string.quoted.double.jpml punctuation.definition.string.begin.jpml
+#            ^^^^ source.jpml meta.entry.jpml string.quoted.double.jpml
+#                ^ source.jpml meta.entry.jpml string.quoted.double.jpml constant.character.escape.jpml
+>  two"
+#^^^^^ source.jpml meta.entry.jpml string.quoted.double.jpml
+#     ^ source.jpml meta.entry.jpml string.quoted.double.jpml punctuation.definition.string.end.jpml
+>url: http://example.com:8080
+#^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#   ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#    ^ source.jpml meta.entry.jpml
+#     ^^^^^^^^^^^^^^^^^^^^^^^ source.jpml meta.entry.jpml string.unquoted.jpml
+>ids: [0xff, 0o755, -0b1010, 1_000, 3.5, 1e-7, +inf, -Infinity, nan]
+#^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#   ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#    ^ source.jpml meta.entry.jpml
+#     ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#      ^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#          ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#           ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#            ^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                 ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                  ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                   ^^^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                          ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                           ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                            ^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                 ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                  ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                   ^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                      ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                       ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                        ^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                            ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                             ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                              ^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                                  ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                                   ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                                    ^^^^^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                                             ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                                              ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                                               ^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.numeric.jpml
+#                                                                  ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+>flags: [true, False, null, None, nil, truely, 12abc]
+#^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#     ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#      ^ source.jpml meta.entry.jpml
+#       ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#        ^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.language.boolean.jpml
+#            ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#             ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#              ^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.language.boolean.jpml
+#                   ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                    ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                     ^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.language.null.jpml
+#                         ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                          ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                           ^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.language.null.jpml
+#                               ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                 ^^^ source.jpml meta.entry.jpml meta.structure.array.jpml constant.language.null.jpml
+#                                    ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                     ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                      ^^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml string.unquoted.jpml
+#                                            ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#                                             ^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#                                              ^^^^^ source.jpml meta.entry.jpml meta.structure.array.jpml string.unquoted.jpml
+#                                                   ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+>empty:
+#^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#     ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+>multi: [
+#^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#     ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#      ^ source.jpml meta.entry.jpml
+#       ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+>  "a",
+#^^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#  ^ source.jpml meta.entry.jpml meta.structure.array.jpml string.quoted.double.jpml punctuation.definition.string.begin.jpml
+#   ^ source.jpml meta.entry.jpml meta.structure.array.jpml string.quoted.double.jpml
+#    ^ source.jpml meta.entry.jpml meta.structure.array.jpml string.quoted.double.jpml punctuation.definition.string.end.jpml
+#     ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+>  [1, 2],
+#^^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#  ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.definition.array.begin.jpml
+#   ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml constant.numeric.jpml
+#    ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+#     ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml
+#      ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml constant.numeric.jpml
+#       ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+#        ^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.separator.array.jpml
+>  {x: 1}
+#^^ source.jpml meta.entry.jpml meta.structure.array.jpml
+#  ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.begin.jpml
+#   ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.dictionary.jpml meta.entry.jpml support.type.property-name.jpml
+#    ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.dictionary.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#     ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.dictionary.jpml meta.entry.jpml
+#      ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.dictionary.jpml meta.entry.jpml constant.numeric.jpml
+#       ^ source.jpml meta.entry.jpml meta.structure.array.jpml meta.structure.dictionary.jpml punctuation.definition.dictionary.end.jpml
+>]
+#^ source.jpml meta.entry.jpml meta.structure.array.jpml punctuation.definition.array.end.jpml
+>unterminated: "oops
+#^^^^^^^^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#            ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#             ^ source.jpml meta.entry.jpml
+#              ^ source.jpml meta.entry.jpml string.quoted.double.jpml punctuation.definition.string.begin.jpml
+#               ^^^^ source.jpml meta.entry.jpml string.quoted.double.jpml
+>after: 1
+#^^^^^ source.jpml meta.entry.jpml support.type.property-name.jpml
+#     ^ source.jpml meta.entry.jpml punctuation.separator.key-value.jpml
+#      ^ source.jpml meta.entry.jpml
+#       ^ source.jpml meta.entry.jpml constant.numeric.jpml
+>

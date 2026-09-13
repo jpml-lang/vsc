@@ -1,0 +1,137 @@
+{
+  "name": "jpml",
+  "displayName": "JPML",
+  "description": "Syntax highlighting, live error checking, outline and formatting for .jp (JPML) files",
+  "version": "1.1.1",
+  "publisher": "jpml-lang",
+  "icon": "images/icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpml-lang/jpml-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jpml-lang/jpml-vscode/issues"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Formatters"
+  ],
+  "keywords": [
+    "jpml",
+    "jp",
+    "config",
+    "configuration",
+    "toml",
+    "json"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "jpml",
+        "aliases": [
+          "JPML",
+          "jpml"
+        ],
+        "extensions": [
+          ".jp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "jpml",
+        "scopeName": "source.jpml",
+        "path": "./syntaxes/jpml.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "jpml.showJson",
+        "title": "Preview as JSON",
+        "category": "JPML",
+        "icon": "$(json)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "jpml.showJson",
+          "when": "editorLangId == jpml"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "jpml.showJson",
+          "when": "resourceLangId == jpml",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "JPML",
+      "properties": {
+        "jpml.validate.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Check .jp files for errors as you type."
+        },
+        "jpml.duplicateKeys": {
+          "type": "string",
+          "enum": [
+            "error",
+            "first",
+            "last"
+          ],
+          "enumDescriptions": [
+            "A repeated key is an error.",
+            "Keep the first value of a repeated key.",
+            "Keep the last value of a repeated key."
+          ],
+          "default": "error",
+          "description": "How repeated keys are treated when checking, formatting and previewing."
+        },
+        "jpml.format.width": {
+          "type": "integer",
+          "default": 88,
+          "minimum": 1,
+          "description": "Column budget for keeping an array on one line when formatting."
+        },
+        "jpml.format.sortKeys": {
+          "type": "boolean",
+          "default": false,
+          "description": "Sort keys alphabetically when formatting."
+        },
+        "jpml.format.allowDroppingComments": {
+          "type": "boolean",
+          "default": false,
+          "description": "Allow Format Document on files that contain comments. The formatter rewrites the whole file and cannot keep comments, so they are removed."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node20 --external:vscode --outfile=dist/extension.js",
+    "typecheck": "tsc",
+    "test": "bun test && npm run test:grammar",
+    "test:grammar": "vscode-tmgrammar-snap \"test/grammar/*.jp\"",
+    "test:grammar:update": "vscode-tmgrammar-snap --updateSnapshot \"test/grammar/*.jp\"",
+    "package": "vsce package --no-dependencies",
+    "vscode:prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "^3.9.2",
+    "esbuild": "^0.28.2",
+    "jpml-lang": "^1.1.1",
+    "typescript": "^7.0.2",
+    "vscode-tmgrammar-test": "^0.1.3"
+  }
+}

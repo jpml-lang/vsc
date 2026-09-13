@@ -1,0 +1,7 @@
+# Deliberately broken, to see live error checking.
+
+[SERVER_ID]
+prefix "!"
+modules: {
+  moderation: true,
+  fun: false

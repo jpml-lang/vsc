@@ -1,0 +1,28 @@
+# Grammar snapshot fixture: every construct the highlighter knows about.
+version: 2
+name: hello world   # an unquoted string, then a comment
+
+[SERVER_ID]
+config: {
+  disabled_channels:,
+  disabled_users: [9892, 82082, 8209],
+  nested: {deep: {deeper: [1, [2, [3]]]}}
+}
+
+[guild.limits]
+["weird.name"]
+"needs quotes": 'single\ttab é \U0001F600'
+bad escape: "oops \q"
+continued: "one \
+  two"
+url: http://example.com:8080
+ids: [0xff, 0o755, -0b1010, 1_000, 3.5, 1e-7, +inf, -Infinity, nan]
+flags: [true, False, null, None, nil, truely, 12abc]
+empty:
+multi: [
+  "a",
+  [1, 2],
+  {x: 1}
+]
+unterminated: "oops
+after: 1
